@@ -1,0 +1,35 @@
+.dropdown-container {
+  position: relative;
+  margin: 0 auto;
+  width: 150px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-radius: 6px;
+  border: 3px solid white;
+  padding: 1rem;
+  background-color: #038f8f;
+  color: white;
+}
+
+.dropdown-container:hover {
+  border: 3px solid teal;
+}
+
+.dropdown {
+  position: fixed;
+  z-index: 999;
+  background: rgba(255, 255, 255, 1);
+  width: 150px;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  border: 3px solid teal;
+}
+
+.dd-item {
+  padding: 1rem 1rem;
+  color: #666666;
+}
+
+.dd-item:hover {
+  background-color: #e0e0e0;
+}

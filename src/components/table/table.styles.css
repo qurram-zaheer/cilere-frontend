@@ -1,0 +1,23 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 20rem;
+}
+
+.table-header {
+  background-color: teal;
+  color: white !important;
+  padding: 1rem 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.table-row {
+  display: flex;
+  color: black;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.table-row div {
+  width: 25%;
+}
