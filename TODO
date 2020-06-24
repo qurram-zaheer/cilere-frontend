@@ -2,9 +2,12 @@ Front-end:
     ✔ @critical Inventory data vs date graph @done(20-06-23 23:21)
     ✔ @critical Table of data filtered on selected product @done(20-06-23 23:21)
     ✔ @critical Dropdown/Select option to pick product @done(20-06-23 23:22)
-    ☐ @low Add button for table editing (changing the inventory level)
+    ✔ @low Add button for table editing (changing the inventory level) @done(20-06-25 01:36)
     ✔ @low Visualize multiple products together @done(20-06-23 23:23)
 
 Back-end:
     ✔ @critical Store the data in a simple file @done(20-06-23 23:23)
     ✔ @critical Implement a simple API @done(20-06-23 23:24)
+
+Deployment:
+    ☐ @critical Deploy server and client on netlify and update necessary parameters
