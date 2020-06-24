@@ -1,34 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./dropdown.styles.css";
 
-const Dropdown = (props) => {
-  const [itemList, setItemList] = useState([]);
+const Dropdown = ({ itemList, selected, setSelected }) => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const { setSelected } = props;
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("http://localhost:5000/product-list");
-      const data = await res.json();
-      setSelected([data[0]]);
-      return setItemList(data);
-    };
-    fetchData();
-  }, [setSelected]);
 
   const handleClick = (product_id) => {
-    const checker = props.selected.findIndex(
+    const checker = selected.findIndex(
       (item) => item.product_id === product_id
     );
 
     if (checker === -1) {
       const foundItem = itemList.find((item) => item.product_id === product_id);
-      return props.setSelected([...props.selected, foundItem]);
+      return setSelected([...selected, foundItem]);
     }
-    const newSelected = props.selected.filter(
+    const newSelected = selected.filter(
       (item) => item.product_id !== product_id
     );
-    return props.setSelected(newSelected);
+    return setSelected(newSelected);
   };
 
   return (
@@ -52,7 +41,7 @@ const Dropdown = (props) => {
             : null}
         </div>
       ) : null}
-      {console.log(props.selected)}
+      {console.log(selected)}
     </div>
   );
 };

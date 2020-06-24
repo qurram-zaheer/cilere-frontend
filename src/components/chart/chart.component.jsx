@@ -29,6 +29,7 @@ const Chart = (props) => {
   console.log(data);
   return (
     <div className="chart-container">
+      <div className="desk-chart">
       <LineChart
         width={600}
         height={300}
@@ -54,6 +55,34 @@ const Chart = (props) => {
         <YAxis />
         <Tooltip />
       </LineChart>
+    </div>
+    <div className="mob-chart">
+    <LineChart
+        width={350}
+        height={200}
+        data={data}
+        margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+      >
+        {console.log("rendering")}
+        {props.selected.map((item, index) => {
+          console.log(item.product_name);
+          return (
+            <Line
+              type="monotone"
+              dataKey={item.product_name}
+              key={item.product_id}
+              stroke={randomColor()}
+              strokeWidth="3"
+            />
+          );
+        })}
+        <Legend verticalAlign="top" height={36} />
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <XAxis dataKey="date" />
+        <YAxis />
+        <Tooltip />
+      </LineChart>
+    </div>
     </div>
   );
 };

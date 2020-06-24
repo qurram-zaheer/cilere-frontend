@@ -1,6 +1,19 @@
 .App {
-  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem 0.5rem
+}
+
+
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media(max-width: 600px){
+  *{
+    font-size: 12px;
+  }
 }

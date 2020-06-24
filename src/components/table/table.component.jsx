@@ -1,16 +1,51 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 import "./table.styles.css";
+import Modal from "../modal/modal.component";
 
 const Table = (props) => {
   const [editMode, toggleEditMode] = useState(false);
+  const [editId, setEditId] = useState(null);
+
+  const handleEditClick = (id) => {
+    setEditId(id);
+    toggleEditMode(true);
+  };
+
+  const updateItem = async (newVal) => {
+    const presentSelected = props.selected;
+    console.log("HERE", newVal);
+    await axios
+      .post(`http://localhost:5000/edit-product/${editId}`, { newVal })
+      .then((res) => {
+        const selectedItemUpdate = res.data.find(
+          (item) => item.product_id === editId
+        );
+        const presentIndex = presentSelected.findIndex(
+          (item) => item.product_id === editId
+        );
+        presentSelected[presentIndex] = selectedItemUpdate;
+        props.setSelected(presentSelected);
+        return props.updateItemList(res.data);
+      });
+
+    return toggleEditMode(false);
+  };
 
   return (
     <div className="table">
+      <Modal
+        show={editMode}
+        handleClose={() => {
+          toggleEditMode(false);
+        }}
+        onSubmit={updateItem}
+      ></Modal>
       <div className="table-row table-header">
         <div>Product ID</div>
         <div>Product Name</div>
-        <div>Product Inventory Level</div>
+        <div>Inventory Level</div>
         <div>Product Date</div>
       </div>
 
@@ -26,7 +61,12 @@ const Table = (props) => {
               <div className="table-row">
                 <div>{item.product_id}</div>
                 <div>{item.product_name}</div>
-                <div>{last_val}</div>
+                <div>
+                  {last_val}{" "}
+                  <div onClick={() => handleEditClick(item.product_id)}>
+                    EDIT
+                  </div>
+                </div>
                 <div>{last_date}</div>
               </div>
             );

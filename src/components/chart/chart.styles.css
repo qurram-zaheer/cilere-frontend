@@ -1,3 +1,17 @@
 .chart-container {
   margin: 2rem auto;
 }
+
+.mob-chart {
+  display: none;
+}
+
+@media(max-width: 600px){
+ .desk-chart {
+   display: none;
+ }
+
+ .mob-chart {
+   display: block;
+ }
+}
