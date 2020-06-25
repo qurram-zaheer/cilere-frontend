@@ -17,7 +17,9 @@ const Table = (props) => {
     const presentSelected = props.selected;
     console.log("HERE", newVal);
     await axios
-      .post(`http://localhost:5000/edit-product/${editId}`, { newVal })
+      .post(`https://cilere-server.herokuapp.com/edit-product/${editId}`, {
+        newVal,
+      })
       .then((res) => {
         const selectedItemUpdate = res.data.find(
           (item) => item.product_id === editId

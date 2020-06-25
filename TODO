@@ -4,6 +4,7 @@ Front-end:
     ✔ @critical Dropdown/Select option to pick product @done(20-06-23 23:22)
     ✔ @low Add button for table editing (changing the inventory level) @done(20-06-25 01:36)
     ✔ @low Visualize multiple products together @done(20-06-23 23:23)
+    ☐ @critical Optimize view for phone
 
 Back-end:
     ✔ @critical Store the data in a simple file @done(20-06-23 23:23)
