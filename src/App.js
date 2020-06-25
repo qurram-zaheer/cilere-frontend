@@ -9,6 +9,8 @@ function App() {
   const [selected, setSelected] = useState([]);
   const [itemList, setItemList] = useState([]);
 
+  /* -------------------- Fetch data to initialize frontend ------------------- */
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:5000/product-list");

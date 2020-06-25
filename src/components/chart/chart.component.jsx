@@ -13,9 +13,15 @@ import {
 
 import "./chart.styles.css";
 
+/* --------------------------------------------------------------------------------------- */
+/*    The line charts are generated with a random color each time,                         */
+/*    to ensure each item has a different colored chart when multiple items are selected   */
+/* --------------------------------------------------------------------------------------- */
+
 const Chart = (props) => {
   let data = [];
 
+  // Check if any products are selected, and clean up data for charts
   if (props.selected.length >= 1) {
     props.selected.forEach((item, index) => {
       item["inv_data"].forEach((inv_data, i2) => {
@@ -30,6 +36,7 @@ const Chart = (props) => {
 
   return (
     <div className="chart-container">
+      {/* Chart for desktop */}
       <div className="desk-chart">
         <LineChart
           width={600}
@@ -56,6 +63,7 @@ const Chart = (props) => {
           <Tooltip />
         </LineChart>
       </div>
+      {/* Chart for mobile devices */}
       <div className="mob-chart">
         <LineChart
           width={350}

@@ -5,11 +5,13 @@ import "./dropdown.styles.css";
 const Dropdown = ({ itemList, selected, setSelected }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
+  // Logic and state management for selecting items.
   const handleClick = (product_id) => {
     const checker = selected.findIndex(
       (item) => item.product_id === product_id
     );
 
+    // If item is already selected, then unselect
     if (checker === -1) {
       const foundItem = itemList.find((item) => item.product_id === product_id);
       return setSelected([...selected, foundItem]);
@@ -17,6 +19,8 @@ const Dropdown = ({ itemList, selected, setSelected }) => {
     const newSelected = selected.filter(
       (item) => item.product_id !== product_id
     );
+
+    //else, add to selected array for chart and table rendering
     return setSelected(newSelected);
   };
 

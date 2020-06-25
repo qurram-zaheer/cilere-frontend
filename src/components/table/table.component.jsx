@@ -13,6 +13,11 @@ const Table = (props) => {
     toggleEditMode(true);
   };
 
+  /* -------------------------------------------------------------------------- */
+  /*        Send request to backend, and update frontend with new values        */
+  /*        when the save button is clicked                                     */
+  /* -------------------------------------------------------------------------- */
+
   const updateItem = async (newVal) => {
     const presentSelected = props.selected;
     console.log("HERE", newVal);
@@ -37,6 +42,7 @@ const Table = (props) => {
 
   return (
     <div className="table">
+      {/* Conditionally rendered editing modal */}
       <Modal
         show={editMode}
         handleClose={() => {

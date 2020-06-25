@@ -5,9 +5,10 @@ Front-end:
     ✔ @low Add button for table editing (changing the inventory level) @done(20-06-25 01:36)
     ✔ @low Visualize multiple products together @done(20-06-23 23:23)
     ✔ @critical Optimize view for phone @done(20-06-25 21:28)
-    ☐ @critical Code review
+    ✔ @critical Code review @done(20-06-26 04:04)
+    ☐ @critical Finish up README
 
 Back-end:
     ✔ @critical Store the data in a simple file @done(20-06-23 23:23)
     ✔ @critical Implement a simple API @done(20-06-23 23:24)
-    ☐ @critical Code review
+    ✔ @critical Code review @done(20-06-26 04:04)
