@@ -17,7 +17,7 @@ const Table = (props) => {
     const presentSelected = props.selected;
     console.log("HERE", newVal);
     await axios
-      .post(`https://cilere-server.herokuapp.com/edit-product/${editId}`, {
+      .post(`http://localhost:5000/edit-product/${editId}`, {
         newVal,
       })
       .then((res) => {

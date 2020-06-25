@@ -11,9 +11,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(
-        "https://cilere-server.herokuapp.com/product-list"
-      );
+      const res = await fetch("http://localhost:5000/product-list");
       const data = await res.json();
       setSelected([data[0]]);
       return setItemList(data);
