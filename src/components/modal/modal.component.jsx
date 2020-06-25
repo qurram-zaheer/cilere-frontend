@@ -14,13 +14,20 @@ const Modal = ({ handleClose, show, onSubmit }) => {
   return (
     <div className={showHideClassName}>
       <div className="modal-main">
-        <div onClick={handleClose}>X</div>
-        <div>
+        <div onClick={handleClose} className="close-btn">
+          <img
+            src="https://img.icons8.com/fluent/24/000000/close-window.png"
+            alt="close-btn"
+          />
+        </div>
+        <div className="modal-content">
           <div>Enter new inventory level</div>
           <div>
             <input type="text" onChange={handleChange}></input>
           </div>
-          <div onClick={() => onSubmit(newVal)}>SAVE</div>
+          <div className="save-btn" onClick={() => onSubmit(newVal)}>
+            SAVE
+          </div>
         </div>
       </div>
     </div>

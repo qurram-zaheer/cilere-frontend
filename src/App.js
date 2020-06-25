@@ -35,6 +35,9 @@ function App() {
           selected={selected}
         />
       </div>
+      <div className="footer">
+        <a href="https://icons8.com/">Close, Edit Window icon by Icons8</a>
+      </div>
     </div>
   );
 }

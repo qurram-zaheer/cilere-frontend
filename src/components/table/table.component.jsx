@@ -60,13 +60,19 @@ const Table = (props) => {
             );
             last_date = `${last_date.getMonth()}/${last_date.getDate()}`;
             return (
-              <div className="table-row">
+              <div className="table-row" key={item.product_id}>
                 <div>{item.product_id}</div>
                 <div>{item.product_name}</div>
-                <div>
+                <div style={{ display: "flex", justifyContent: "center" }}>
                   {last_val}{" "}
-                  <div onClick={() => handleEditClick(item.product_id)}>
-                    EDIT
+                  <div
+                    className="edit-btn"
+                    onClick={() => handleEditClick(item.product_id)}
+                  >
+                    <img
+                      src="https://img.icons8.com/cotton/16/000000/edit--v1.png"
+                      alt="edit-btn"
+                    />
                   </div>
                 </div>
                 <div>{last_date}</div>

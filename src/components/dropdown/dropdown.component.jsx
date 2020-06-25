@@ -41,7 +41,6 @@ const Dropdown = ({ itemList, selected, setSelected }) => {
             : null}
         </div>
       ) : null}
-      {console.log(selected)}
     </div>
   );
 };

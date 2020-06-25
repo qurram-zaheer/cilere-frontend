@@ -1,31 +1,40 @@
 .table {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem;
 }
 
 .table-header {
-  background-color: teal;
+  background-color: teal !important;
   color: white !important;
-  padding: 0.5rem 0.5rem;
   border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  font-size: small;
 }
 
 .table-row {
   display: flex;
   color: black;
-  width: 80%;
-  padding: 1rem 1rem;
+  width: 100%;
+  background-color: #cbf3f0;
   margin: 0 auto;
 }
 
 .table-row div {
   width: 25%;
+  padding: 1rem 1rem;
+  text-align: center;
 }
 
-@media(max-width: 600px){
-  .table{
+.edit-btn {
+  padding: 0 !important;
+  cursor: pointer;
+  border: none !important;
+  padding-left: 10px !important;
+}
+
+@media (max-width: 600px) {
+  .table {
     font-size: 11px;
-    padding: 0.25rem 0.25rem
+    padding: 0.25rem 0.25rem;
   }
 }
