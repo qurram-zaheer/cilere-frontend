@@ -6,7 +6,7 @@ Front-end:
     ✔ @low Visualize multiple products together @done(20-06-23 23:23)
     ✔ @critical Optimize view for phone @done(20-06-25 21:28)
     ✔ @critical Code review @done(20-06-26 04:04)
-    ☐ @critical Finish up README
+    ✔ @critical Finish up README @done(20-06-26 12:40)
 
 Back-end:
     ✔ @critical Store the data in a simple file @done(20-06-23 23:23)
