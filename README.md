@@ -21,12 +21,14 @@ You may install Yarn [from here](https://classic.yarnpkg.com/en/docs/install/#de
 [Sequence diagram](https://ibb.co/ChTksZj)
 
 ## Screenshots
-![ss1](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ss1.PNG)
-![ss2](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ss2.PNG)
-![ss3](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ss3.PNG)
+
 ![ssm1](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ssm1.PNG)
 ![ssm2](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ssm2.PNG)
 ![ssm4](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ssm4.PNG)
+![ss1](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ss1.PNG)
+![ss2](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ss2.PNG)
+![ss3](https://github.com/qurram-zaheer/cilere-frontend/blob/master/src/screenshots/ss3.PNG)
+
 
 
 Please feel free to email me if there is any issues
