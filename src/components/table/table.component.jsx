@@ -57,35 +57,39 @@ const Table = (props) => {
         <div>Product Date</div>
       </div>
 
-      {props.selected.length >= 1
-        ? props.selected.map((item) => {
-            const { inv_data } = item;
-            const last_val = inv_data[inv_data.length - 1]["inventoryVal"];
-            let last_date = new Date(
-              parseInt(inv_data[inv_data.length - 1]["date"])
-            );
-            last_date = `${last_date.getMonth()}/${last_date.getDate()}`;
-            return (
-              <div className="table-row" key={item.product_id}>
-                <div>{item.product_id}</div>
-                <div>{item.product_name}</div>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  {last_val}{" "}
-                  <div
-                    className="edit-btn"
-                    onClick={() => handleEditClick(item.product_id)}
-                  >
-                    <img
-                      src="https://img.icons8.com/cotton/16/000000/edit--v1.png"
-                      alt="edit-btn"
-                    />
-                  </div>
+      {props.selected.length >= 1 ? (
+        props.selected.map((item) => {
+          const { inv_data } = item;
+          const last_val = inv_data[inv_data.length - 1]["inventoryVal"];
+          let last_date = new Date(
+            parseInt(inv_data[inv_data.length - 1]["date"])
+          );
+          last_date = `${last_date.getMonth()}/${last_date.getDate()}`;
+          return (
+            <div className="table-row" key={item.product_id}>
+              <div>{item.product_id}</div>
+              <div>{item.product_name}</div>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {last_val}{" "}
+                <div
+                  className="edit-btn"
+                  onClick={() => handleEditClick(item.product_id)}
+                >
+                  <img
+                    src="https://img.icons8.com/cotton/16/000000/edit--v1.png"
+                    alt="edit-btn"
+                  />
                 </div>
-                <div>{last_date}</div>
               </div>
-            );
-          })
-        : null}
+              <div>{last_date}</div>
+            </div>
+          );
+        })
+      ) : (
+        <div className="null-field">
+          Please select an item to view details and chart
+        </div>
+      )}
     </div>
   );
 };

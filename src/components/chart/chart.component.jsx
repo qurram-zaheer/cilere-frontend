@@ -23,12 +23,14 @@ const Chart = (props) => {
 
   // Check if any products are selected, and clean up data for charts
   if (props.selected.length >= 1) {
+    console.log(props.selected);
     props.selected.forEach((item, index) => {
       item["inv_data"].forEach((inv_data, i2) => {
         if (index === 0) {
           let d = new Date(parseInt(inv_data.date));
           data.push({ date: `${d.getMonth()}/${d.getDate()}`, p: 44 });
         }
+        console.log(data, i2, data[i2]);
         data[i2][item.product_name] = inv_data.inventoryVal;
       });
     });
